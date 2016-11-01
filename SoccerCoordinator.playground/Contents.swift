@@ -59,11 +59,11 @@ for player in players {
 // Print letter to parent for each team
 
 for player in dragons {
-    print("Hello " + (players[player]?["Guardian"] as! String) + ". Your child's " + player + " team the Dragons has their first practice on Sunday, November 6th at 10am.")
+    print("Hello " + (players[player]?["Guardian"] as! String) + ". Your child's " + player + " team the Dragons has their first practice on March 17 at 1pm.")
 }
 for player in sharks {
-    print("Hello " + (players[player]?["Guardian"] as! String) + ". Your child's " + player + " team the Sharks has their first practice on Sunday, November 6th at 12pm.")
+    print("Hello " + (players[player]?["Guardian"] as! String) + ". Your child's " + player + " team the Sharks has their first practice on March 17 at 3pm.")
 }
 for player in raptors {
-    print("Hello " + (players[player]?["Guardian"] as! String) + ". Your child's " + player + " team the Raptors has their first practice on Sunday, November 6th at 2pm.")
+    print("Hello " + (players[player]?["Guardian"] as! String) + ". Your child's " + player + " team the Raptors has their first practice on March 18 at 1pm.")
 }
