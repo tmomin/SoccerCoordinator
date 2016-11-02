@@ -28,30 +28,35 @@ var raptors: [String] = []
 
 // Sort players into three teams with equal experienced players in each
 
-var count = 0
+var expCount = 0
+var noExpCount = 0
 
 for player in players {
     if ((player.value["Experience"] as! Bool) == true) {
-        switch count {
-        case 0: dragons.append(player.key);
-        case 1: sharks.append(player.key);
-        case 2: raptors.append(player.key);
-        default: count = 0
-        }
-        count += 1
-        if (count == 3) {
-            count = 0
+        switch expCount {
+        case 0:
+            dragons.append(player.key)
+            expCount += 1
+        case 1:
+            sharks.append(player.key)
+            expCount += 1
+        case 2:
+            raptors.append(player.key)
+            expCount = 0
+        default: expCount = 0
         }
     } else if ((player.value["Experience"] as! Bool) == false) {
-        switch count {
-        case 0: dragons.append(player.key);
-        case 1: sharks.append(player.key);
-        case 2: raptors.append(player.key);
-        default: count = 0
-        }
-        count += 1
-        if (count == 3) {
-            count = 0
+        switch noExpCount {
+        case 0:
+            dragons.append(player.key);
+            noExpCount += 1
+        case 1:
+            sharks.append(player.key);
+            noExpCount += 1
+        case 2:
+            raptors.append(player.key);
+            noExpCount = 0
+        default: noExpCount = 0
         }
     }
 }
